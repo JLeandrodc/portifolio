@@ -1,0 +1,132 @@
+.skills{
+    min-height: 100vh;
+    background-color: var(--second-bg-color);
+    padding: 5rem 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.skills .heading{
+    color: var(--text-color);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.our-skills {
+    padding: 1.875vw;
+    width: 80vw;
+}
+
+.our-skills .skill {
+    margin: 6rem 1.5rem;
+}
+
+.skill p {
+    margin-bottom: 0.75rem;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.skill .progress-line {
+    position: relative;
+    width: 100%;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+}
+
+.skill .progress-line::before {
+    position: absolute;
+    content: "";
+    height: 1.875rem;
+    width: 1.875rem;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.skill .progress-line.animate::before {
+    animation: circle-animate 2s forwards ease-out;
+    opacity: 1;
+}
+
+@keyframes circle-animate {
+    25% {
+        left: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        left: calc(var(--wd) - 0.5rem);
+    }
+}
+
+.skill .progress-line span {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+.skill .progress-line.animate span {
+    animation: span-animate 2s forwards ease-out;
+}
+
+@keyframes span-animate {
+    25% {
+        width: 0;
+    }
+    100% {
+        width: var(--wd);
+    }
+}
+
+.skill .progress-line span::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.525rem solid transparent;
+    border-top-color: var(--bg);
+    top: -0.675rem;
+    right: -0.45rem;
+    opacity: 0;
+}
+
+.skill .progress-line.animate span::before {
+    animation: hint 0.2s forwards 2.2s;
+    opacity: 1;
+}
+
+.skill .progress-line span::after {
+    position: absolute;
+    content: var(--tx);
+    color: #ffffff;
+    top: -2.25rem;
+    right: -1.2rem;
+    background: var(--second-bg-color);
+    padding: 0.225rem 0.45rem;
+    font-size: 1.26rem;
+    border-radius: 0.3rem;
+    opacity: 0;
+}
+
+.skill .progress-line.animate span::after {
+    animation: hint 0.2s forwards 2.2s;
+    opacity: 1;
+}
+
+@keyframes hint {
+    to {
+        transform: translateY(-0.375rem);
+        opacity: 1;
+    }
+}
