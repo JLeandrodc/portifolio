@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px) 0 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.050) 1px, transparent 1px) 0 0;
     background-size: 100% 20px;
     animation: breeze 5s ease-in-out infinite;
     background-color: #111111; /* Cor de fundo de fallback */
@@ -32,7 +32,6 @@
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
-
 }
 
 /* Títulos*/
@@ -59,9 +58,9 @@
 /* Parágrafos e span*/
 .home .content p {
     color: var(--text-color);
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.5;
-    width: 50rem;
+    width: 70rem;
     margin-bottom: 1rem;
     text-align: left;
     font-family: "Handjet", sans-serif;
@@ -73,9 +72,9 @@
     letter-spacing: 0.1rem;
 }
 
-.home .content span {
+.home .content p span {
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     line-height: 1.5;
     width: 50rem;
     margin-bottom: 1rem;
@@ -116,17 +115,18 @@
 
 .home .content .icons i {
     color: var(--main-color);
-    font-size: 2rem;
+    font-size: 3rem; /* Aumenta o tamanho do ícone */
     border: 0.2rem solid var(--main-color);
-    padding: 1rem;
-    border-radius: 50%;
+    padding: 1rem; /* Ajusta o padding para garantir que a borda seja proporcional ao ícone */
+    border-radius: 50%; /* Faz o contorno em forma de círculo */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
 .home .content .icons i:hover {
     transform: scale(1.1); /* Leve aumento ao passar o mouse */
-    box-shadow: 0 0 0.5rem var(--main-color);
+    box-shadow: 0 0 0.5rem var(--main-color); /* Adiciona uma sombra ao redor do ícone */
 }
+
 
 /* Imagem */
 .home .image{
