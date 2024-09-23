@@ -5,17 +5,13 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Contato - J.Leandro</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +21,16 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <link href="assets/css/cssCleaner.css" rel="stylesheet">
+
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .hidden {
+      display: none !important;
+      /* Force css */
+    }
+  </style>
 
 </head>
 
@@ -39,30 +44,28 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
+        <ul class="lang" data-lang="pt">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Sobre mim</a></li>
           <li><a href="services.html">Trabalhos</a></li>
           <li><a href="portfolio.html">Portfólio</a></li>
           <li><a href="contact.html" class="active">Contato</a></li>
         </ul>
+        <ul class="lang hidden" data-lang="en">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <button id="language-toggle" class="btn btn-outline-secondary">English</button>
     </div>
   </header>
 
   <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Contato</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -73,8 +76,12 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Endereço</h3>
-                <p>São Paulo - SP, Cep: 03683-000</p>
+                <h3><span class="lang" data-lang="pt">Endereço</span>
+                  <span class="lang hidden" data-lang="en">Address</span>
+                </h3>
+                <p><span class="lang" data-lang="pt">São Paulo - SP, Cep: 03683-000</span>
+                  <span class="lang hidden" data-lang="en">São Paulo - SP, Zip: 03683-000</span>
+                </p>
               </div>
             </div>
           </div>
@@ -83,7 +90,8 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
               <i class="icon bi bi-whatsapp flex-shrink-0"></i>
               <div>
-                <h3>Mensagem via Whatsapp</h3>
+                <h3><span class="lang" data-lang="pt">Mensagem via WhatsApp</span><span class="lang hidden"
+                    data-lang="en">Message on WhatsApp</span></h3>
                 <p>+55 (11) 96278-4604</p>
               </div>
             </div>
@@ -93,8 +101,9 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email</h3>
-                <p>leandrofrota@gmail.com</p>
+                <h3><span>E-mail</span>
+                </h3>
+                <p>leandrofrotadasilva.com</p>
               </div>
             </div>
           </div>
@@ -103,46 +112,70 @@
             <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
               <i class="icon bi bi-share flex-shrink-0"></i>
               <div>
-                <h3>Midias</h3>
+                <h3><span class="lang" data-lang="pt">Mídias sociais</span><span class="lang hidden"
+                    data-lang="en">Social
+                    Media</span></h3>
                 <div class="social-links">
                   <a href="https://github.com/JLeandrodc"><i class="bi bi-github"></i></a>
-                  <a href="mailto:seuemail@gmail.com"><i class="bi bi-envelope"></i></a>
+                  <a href="mailto:leandrofrotadasilva.com"><i class="bi bi-envelope"></i></a>
                   <a href="https://linkedin.com/in/jose-leandro-frota"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Contact Form -->
-        <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <input type="text" id="name" name="name" class="form-control" placeholder="Seu Nome" required>
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email" name="email" class="form-control" placeholder="Seu Email" required>
-            </div>
-            <div class="col-md-12">
-              <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto" required>
-            </div>
-            <div class="col-md-12">
-              <textarea class="form-control" id="message" name="message" rows="6" placeholder="Mensagem" required></textarea>
-            </div>
-            <div class="col-md-12 text-center">
-              <div class="loading" style="display: none;">Carregando</div>
-              <div class="error-message" style="display: none;">Erro no envio, tente novamente.</div>
-              <div class="sent-message" style="display: none;">Mensagem enviada com sucesso, muito obrigado!</div>
-              <button type="submit">Enviar</button>
-            </div>
+          <div class="contactEmail">
+            <h1>
+              <span class="emoji wave" role="img" aria-label="👋">👋</span>
+              <span class="lang" data-lang="pt">Mande um e-mail abaixo</span>
+              <span class="lang hidden" data-lang="en">Send an email below</span>
+              <span class="emoji" role="img" aria-label="👇">👇</span>
+            </h1>
           </div>
-        </form>
-      </div>
+
+
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Seu Nome/Your name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Seu E-mail/Your E-mail"
+                  required>
+              </div>
+              <div class="col-md-12">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto/Subject"
+                  required>
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Mensagem/Message"
+                  required></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="loading" style="display: none;"><span class="lang" data-lang="pt">Carregando</span><span
+                    class="lang hidden" data-lang="en">Loading</span></div>
+                <div class="error-message" style="display: none;"><span class="lang" data-lang="pt">Erro no envio,
+                    tente
+                    novamente.</span><span class="lang hidden" data-lang="en">Error sending, please try again.</span>
+                </div>
+                <div class="sent-message" style="display: none;"><span class="lang" data-lang="pt">Mensagem enviada
+                    com
+                    sucesso, muito obrigado!</span><span class="lang hidden" data-lang="en">Message sent successfully,
+                    thank you!</span></div>
+                <button type="submit"><span class="lang" data-lang="pt">Enviar</span><span class="lang hidden"
+                    data-lang="en">Send</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
     </section>
   </main>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -161,6 +194,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/translate.js"></script>
 
 </body>
 

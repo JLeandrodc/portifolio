@@ -21,7 +21,15 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <link href="assets/css/cssCleaner.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .hidden {
+      display: none !important;
+      /* Force css */
+    }
+  </style>
 
 </head>
 
@@ -35,14 +43,25 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html"class="active">Inicio</a></li>
+        <ul class="lang" data-lang="pt">
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="about.html">Sobre mim</a></li>
+          <li><a href="services.html">Trabalhos</a></li>
           <li><a href="portfolio.html">Portfólio</a></li>
           <li><a href="contact.html">Contato</a></li>
         </ul>
+        <ul class="lang hidden" data-lang="en">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="services.html">Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <button id="language-toggle" class="btn btn-outline-secondary">English</button>
+
 
     </div>
   </header>
@@ -56,15 +75,25 @@
 
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>José Leandro</h2>
-        <p>Eu sou <span class="typed"
-            data-typed-items="Desenvolvedor Front-End, Desenvolvedor Back-End, Analista de dados">Photographer</span><span
-            class="typed-cursor typed-cursor--blink"></span></p>
-        <div class="social-links">
-          <a href="https://github.com/JLeandrodc"><i class="bi bi-github"></i></a>
-          <a href="mailto:seuemail@gmail.com"><i class="bi bi-envelope"></i></a>
-          <a href="https://linkedin.com/in/jose-leandro-frota"><i class="bi bi-linkedin"></i></a>
+        <p class="hidden" data-lang="">Eu sou <span class="typed"
+            data-typed-items="Desenvolvedor Front-End, Desenvolvedor Back-End, Analista de dados"></span><span
+            class="typed-cursor typed-cursor--blink"></span>
+        </p>
+
+        <p class="lang" data-lang="">Eu sou <span class="typed"
+            data-typed-items="Desenvolvedor Front-End, Desenvolvedor Back-End, Analista de dados"></span><span
+            class="typed-cursor typed-cursor--blink"></span>
+        </p>
+
+        <p class="lang hidden" data-lang="en">I am a <span class="typed"
+            data-typed-items="Front-End Developer, Back-End Developer, Data Analyst"></span><span
+            class="typed-cursor typed-cursor--blink"></span>
+        </p>
+
+        <div class="button">
+          <a href="assets/download/curriculo-JLeandro.pdf" class="btn btn-outline-secondary" download>Download CV</a>
         </div>
-      </div>
+        
 
     </section><!-- /Hero Section -->
 
@@ -91,6 +120,10 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/translate.js"></script>
+
+  <script src="assets/js/animation.js"></script>
 
 </body>
 

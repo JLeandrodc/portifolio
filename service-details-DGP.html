@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>DGP</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .hidden {
+      display: none !important;
+      /* Force css */
+    }
+  </style>
+
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Portfólio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul class="lang" data-lang="pt">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Sobre mim</a></li>
+          <li><a href="services.html">Trabalhos</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+        <ul class="lang hidden" data-lang="en">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="services.html">Work</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <button id="language-toggle" class="btn btn-outline-secondary">English</button>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="services.html" class="current lang" data-lang="pt">Trabalhos</a><a href="services.html"
+                  class="current lang hidden" data-lang="en">Projects</a></li>
+              <li class="current lang" data-lang="pt">Projeto de Dashboard de Gastos Públicos</li>
+              <li class="current lang hidden" data-lang="en">Public Spending Dashboard Project</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list">
+              <a>PostgreSQL</a>
+              <a>Power BI</a>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+            <h3 class="lang" data-lang="pt">Dashboard Interativo de Gastos Públicos</h3>
+            <h3 class="lang hidden" data-lang="en">Interactive Public Spending Dashboard</h3>
+            <p class="lang" data-lang="pt">
+              Este projeto foi uma ramificação do IEGM, focado na criação de um dashboard detalhado que apresentava
+              todos os gastos públicos de cada setor, com atualizações em tempo real sobre as despesas e a verba
+              disponível para cada secretaria. A proposta incluía a geração de indicadores relevantes para facilitar a
+              análise dos dados.
+            </p>
+            <p class="lang hidden" data-lang="en">
+              This project was a branch of the IEGM, focused on creating a detailed dashboard that presented
+              all public spending from each sector, with real-time updates on expenses and the available budget
+              for each department. The proposal included generating relevant indicators to facilitate data analysis.
+            </p>
+
+
+            <ul class="lang" data-lang="pt">
+              <h3>Principais atividades</h3>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Desenvolvimento do Banco de Dados</strong>: Criei um
+                  banco de dados com informações iniciais sobre os gastos públicos, assegurando que os dados fossem
+                  organizados e acessíveis.
+                </span></li>
+              <li><i class="bi bi-check-circle"></i> <span> <strong>Criação do Dashboard</strong>: Utilizei o Power BI
+                  para desenvolver um protótipo de dashboard que mostrava visualmente as despesas em tempo real e a
+                  verba remanescente de cada secretaria.</span> </li>
+              <li><i class="bi bi-check-circle"></i> <span> <strong>Planejamento para Integração com Django</strong>:
+                  Embora a intenção fosse integrar o sistema com Django para aprimorar a funcionalidade do dashboard, o
+                  projeto foi interrompido devido ao término do meu contrato.</span></li>
+            </ul>
+
+            <ul class="lang hidden" data-lang="en">
+              <h3>Main Activities</h3>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span><strong>Database Development</strong>: I created a database with initial information on public
+                  spending, ensuring that the data was organized and accessible.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span><strong>Dashboard Creation</strong>: I used Power BI to develop a dashboard prototype that
+                  visually displayed real-time expenses and the remaining budget for each department.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span><strong>Planning for Integration with Django</strong>: Although the intention was to integrate the
+                  system with Django to enhance the dashboard's functionality, the project was interrupted due to the
+                  end of my contract.</span>
+              </li>
+            </ul>
+
+
+            <h3 class="lang" data-lang="pt">Impactos do trabalho</h3>
+            <p class="lang" data-lang="pt">
+              Embora o projeto tenha sido abandonado, a estrutura inicial desenvolvida proporcionou uma base sólida para
+              futuros esforços na transparência e eficiência dos gastos públicos, permitindo uma melhor compreensão das
+              finanças municipais.
+            </p>
+
+            <h3 class="lang hidden" data-lang="en">Impact of the Work</h3>
+            <p class="lang hidden" data-lang="en">
+              Although the project was abandoned, the initial structure developed provided a solid foundation for
+              future efforts in transparency and efficiency in public spending, allowing for better understanding of
+              municipal finances.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+  <!-- Scroll Top -->
+  <a id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/translate.js"></script>
+
+</body>
+
+</html>

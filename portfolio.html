@@ -6,8 +6,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Portfólio - J.Leandro</title>
 
-
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -23,7 +21,14 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <link href="assets/css/cssCleaner.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .hidden {
+      display: none !important;
+    }
+  </style>
 
 </head>
 
@@ -33,25 +38,31 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename">Portfólio</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
+        <ul class="lang" data-lang="pt">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Sobre mim</a></li>
           <li><a href="services.html">Trabalhos</a></li>
-          <li><a href="portfolio.html" class="active" >Portfólio</a></li>
+          <li><a href="portfolio.html" class="active">Portfólio</a></li>
           <li><a href="contact.html">Contato</a></li>
+        </ul>
+        <ul class="lang hidden" data-lang="en">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="services.html">Work</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
+      <button id="language-toggle" class="btn btn-outline-secondary">English</button>
+
     </div>
   </header>
-
   <main class="main">
 
     <!-- Page Title -->
@@ -60,8 +71,12 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Portfólio</h1>
-              <p class="mb-0">Aqui fica alguns trabalhos que fiz para treinar e aprender um pouco sobre a linguagem</p>
+              <h1><span class="lang" data-lang="pt">Portfólio</span><span class="lang hidden"
+                  data-lang="en">Portfolio</span></h1>
+              <p class="mb-0 lang" data-lang="pt">Aqui fica alguns trabalhos que fiz para treinar e aprender um pouco
+                sobre a linguagem</p>
+              <p class="mb-0 lang hidden" data-lang="en">Here are some works I've done to practice and learn a bit about
+                the language</p>
             </div>
           </div>
         </div>
@@ -76,10 +91,14 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Todos</li>
-            <li data-filter=".filter-frontEnd">Front-end</li>
-            <li data-filter=".filter-backEnd">Back-end</li>
-            <li data-filter=".filter-analiseDados">Análise de dados</li>
+            <li data-filter="*" class="filter-active"><span class="lang" data-lang="pt">Todos</span><span
+                class="lang hidden" data-lang="en">All</span></li>
+            <li data-filter=".filter-frontEnd"><span class="lang" data-lang="pt">Front-end</span><span
+                class="lang hidden" data-lang="en">Front-end</span></li>
+            <li data-filter=".filter-backEnd"><span class="lang" data-lang="pt">Back-end</span><span class="lang hidden"
+                data-lang="en">Back-end</span></li>
+            <li data-filter=".filter-analiseDados"><span class="lang" data-lang="pt">Análise de dados</span><span
+                class="lang hidden" data-lang="en">Data Analysis</span></li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -88,7 +107,8 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/spotify.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Spotify</h4>
+                  <h4><span class="lang" data-lang="pt">Spotify</span><span class="lang hidden"
+                      data-lang="en">Spotify</span></h4>
                   <a href="assets/img/portfolio/spotify.png" title="Spotify" data-gallery="portfolio-gallery-app"
                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://jleandrodc.github.io/Spotify/" title="More Details" class="details-link"><i
@@ -109,10 +129,16 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Projetos futuros</h3>
-      <p>Estou atualmente trabalhando em um projeto chamado Proto-on, ultilizando Spring boot para o back-end,
-        react-native para o front-end, mobile e Web, por ser um projeto grande e privado, irei apenas postar um video
-        para mostrar um pouco do meu trabalho. </p>
+      <h3 class="sitename"><span class="lang" data-lang="pt">Projetos futuros</span><span class="lang hidden"
+          data-lang="en">Future Projects</span></h3>
+      <p><span class="lang" data-lang="pt">Estou atualmente trabalhando em um projeto chamado Proto-on, utilizando
+          Spring boot para o back-end, react-native para o front-end, mobile e Web. Por ser um projeto grande e privado,
+          irei apenas postar um video para mostrar um pouco do meu trabalho.
+        </span><span class="lang hidden" data-lang="en">I am currently working on a project called Proto-on, using
+          Spring Boot for the back-end and
+          React Native for the front-end, mobile and web. As it is a large and private project, I will only post a video
+          to show a bit of my work.</span>
+      </p>
     </div>
   </footer>
 
@@ -137,6 +163,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/translate.js"></script>
 
 </body>
 

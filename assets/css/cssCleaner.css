@@ -1,0 +1,47 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    line-height: 1.15; /* Improves readability */
+  }
+  
+  body {
+    font-family: var(--default-font);
+    font-size: 16px; /* Base font size */
+    color: var(--default-color);
+    background-color: var(--background-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit; /* Inherits color from parent element */
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Additional styles to improve usability */
+  img {
+    max-width: 100%;
+    height: auto; /* Makes images responsive */
+  }
+  
+  table {
+    border-collapse: collapse; /* Makes table borders more consistent */
+  }
+  
