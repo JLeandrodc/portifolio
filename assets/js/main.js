@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 function openPopup(url) {
   window.open(url, 'popup', 'width=1080,height=720,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no');
 }
