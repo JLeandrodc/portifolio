@@ -694,7 +694,8 @@ section,
   justify-content: center;
 }
 
-.hero img {
+/* Imagem de fundo (background) */
+.hero > img {
   position: absolute;
   inset: 0;
   display: block;
@@ -704,58 +705,166 @@ section,
   z-index: 1;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); /*filtro de pelicula escura(desligado)*/
+  z-index: 2;
+}
+
 .hero .container {
   position: relative;
   z-index: 3;
+  height: 450px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .hero h2 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: white;
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: white;
 }
 
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .hero .social-links {
   margin-top: 25px;
 }
 
-.hero .social-links a {
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-  font-size: 14px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  display: inline-flex;
+
+.hero .hero-content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; /* Alterado de space-between para flex-end */
   align-items: center;
+  gap: 10%; /* Aumente este valor para mais espaço entre texto e foto */
+  height: 100%;
+}
+
+.hero .text-block {
+  flex: 0 1 470px; /* Alterado de flex: 1 para ter largura mais controlada */
+  text-align: left;
+  margin-left: auto; /* Isso ajuda a empurrar o bloco para a direita */
+  padding-right: 50px; /* Espaço extra à direita do texto */
+}
+
+.hero .image-block {
+  flex: 0 0 450px; /* AQUI - Aumente este valor para a largura desejada */
+  display: flex;
   justify-content: center;
-  margin-right: 20px;
-  transition: 0.3s;
+  background-color: #0D0000;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  max-height: 600px; /* AQUI - Aumente este valor para a altura desejada */
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.5);
+}
+
+/* Foto do perfil - ESTILO CORRIGIDO */
+.hero .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* AQUI - Pode mudar para 'contain' se quiser ver a foto inteira */
+  object-position: center; /* AQUI - Ajuste o enquadramento (ex: 'top center') */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.5);
+  position: relative;
+}
+
+.hero .button {
+  margin-top: 30px;
+}
+
+.hero .btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-outline-secondary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+}
+
+.hero .btn-outline-secondary:hover {
+  background: var(--accent-color);
+  color: white;
 }
 
 .hero .social-links a:hover {
   background-color: var(--accent-color);
+  color: white;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .hero .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .hero .container {
+    height: auto;
+    padding: 60px 15px;
+  }
+  
+  .hero .image-block {
+    max-height: 350px;
+  }
+  
+  .hero .text-block {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 42px;
   }
 
   .hero p {
     font-size: 20px;
   }
+  
+  .hero .image-block {
+    flex: 0 0 220px;
+    max-height: 300px;
+  }
 }
+
+@media (max-width: 576px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  .hero .button {
+    margin-top: 20px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1247,8 +1356,10 @@ section,
 }
 
 .portfolio .portfolio-content img {
-  width: 500px; /* Defina a largura padrão */
-  height: 200px; /* Defina a altura padrão */
+  width: 500px;
+  /* Defina a largura padrão */
+  height: 200px;
+  /* Defina a altura padrão */
   transition: 0.3s;
 }
 
@@ -1306,7 +1417,8 @@ section,
   left: 30%;
   font-size: 40px;
   line-height: 0;
-  top: 40% /* Adiciona essa linha para mover o elemento para cima */
+  top: 40%
+    /* Adiciona essa linha para mover o elemento para cima */
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
